@@ -213,7 +213,7 @@ object Huffman {
    * the code table `table`.
    */
   def codeBits(table: CodeTable)(char: Char): List[Bit] = {
-    table.filter(p => p._1.equals(char)).flatMap(p => p._2)
+    table.filter(p => p._1 == char).flatMap(p => p._2)
   }
 
   /**
